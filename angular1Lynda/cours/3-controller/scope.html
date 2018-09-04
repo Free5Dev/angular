@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+</head>
+<body ng-app>
+            {{maVar}}
+    <div ng-controller="myController">
+        {{myVar}}
+    </div>
+    <div ng-controller="mySecondController">
+            {{myVar+mySecondVar}}
+        </div>
+    <script type="text/javascript">
+        function myController($scope,$rootScope){
+            // le $rootScope est visible en dehors du controlleur
+            $rootScope.maVar="test";
+            // le scoop est visible dans le controller
+            $scope.myVar=1;
+            $scope.mySecondVar=2;
+        }
+        function mySecondController($scope){
+            $scope.myVar=4;
+            $scope.mySecondVar=5;
+        }
+    </script>
+</body>
+</html>

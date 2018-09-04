@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    </head>
+    <body ng-app>
+        <span ng-controller="myController">
+            <p>{{ name }}</p>
+        </span>
+
+        <div>
+        </div>
+
+        <script type="text/javascript">
+            function myController ($scope) {
+                $scope.name = 'toto';
+            }
+        </script>
+    </body>
+</html>

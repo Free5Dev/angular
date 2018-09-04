@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+    <!-- ng-app pour compilet la page gn-init pour assiner la variable sans ng-app la page ne se compile pas -->
+    <body ng-app ng-init="myVar='toto';secondVar='tata'">
+        <!-- affichage du contenu de la variable -->
+        {{myVar+" "+secondVar}}
+    </body>
+    
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    </head>
+    <body ng-app>
+        <span ng-controller="myController">
+            <p ng-repeat="item in items">
+                {{ item.name | uppercase }} est {{ item.sexe }} et a {{ item.age }} ans
+            </p>
+        </span>
+
+        <div>
+        </div>
+
+        <script type="text/javascript">
+            function myController ($scope) {
+                $scope.items = [
+                    {'name' : 'toto', 'age' : 18, 'sexe' : 'garcon'},
+                    {'name' : 'tata', 'age' : 25, 'sexe' : 'fille'}
+                ]
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    </head>
+    <body ng-app>
+            {{maVar}}
+        <span ng-controller="myController">
+            <p>{{ myVar + mySecondVar }}</p>
+        </span>
+
+        <div ng-controller="mySecondController">
+            <p>{{ myVar + mySecondVar }}</p>
+        </div>
+
+        <script type="text/javascript">
+            function myController ($scope, $rootScope) {
+                $rootScope.maVar = 'test';
+                $scope.myVar = 1;
+                $scope.mySecondVar = 2;
+            }
+
+            function mySecondController ($scope) {
+                $scope.myVar = 5;
+                $scope.mySecondVar = 6;
+            }
+        </script>
+    </body>
+</html>
