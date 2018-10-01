@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../2-baseAngularJs/angular.js"></script>
+    <title>Document</title>
+</head>
+<!-- ng-app pour compiler la page -->
+<body ng-app>
+    <!-- assignation du nom du controller avec la directive ng-controller -->
+    <div ng-controller="myController">
+        <!-- affichage du nom des variable à l'interieir du du bloc myController -->
+        {{myVar+" et "+mySecondVar}}   
+    </div>
+    <!-- creation d'un premier controller -->
+    <script type="text/javascript">
+        // avec le scope les variable ne seront visible qu'a l'interieir de leur scope
+        function myController($scope){
+            $scope.myVar="toto";
+            $scope.mySecondVar="tata";
+        }
+    </script>
+</body>
+</html>

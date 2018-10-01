@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../2-baseAngularJs/angular.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app>
+    <!-- affichage du controller -->
+    <div ng-controller="myController">
+        <!-- la directive de repeat  -->
+        <p ng-repeat="item in items">
+            {{item.nom}} a {{item.age}} ans et est:{{item.sexe}}
+        </p>
+    </div>
+    <script type="text/javascript">
+        function myController($scope){
+            $scope.items=[
+                {"nom":"alian","age":12,"sexe":"M"},
+                {"nom":"ilian","age":10,"sexe":"F"}
+            ];
+        }
+    </script>
+</body>
+</html>

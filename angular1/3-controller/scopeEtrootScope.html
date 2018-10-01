@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../2-baseAngularJs/angular.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app>
+    <!--  pour connecter le controller -->
+    <div ng-controller="myController">
+        {{name+" "+age+" "+force}}
+    </div>
+    <!-- avec le rootScope l'affichage sera visible partout en déhors du controller -->
+    {{force}}
+    <!-- affichage second controller -->
+    <div ng-controller="mySecondController">
+        {{nom}}
+    </div>
+    <!-- controller scope et rootScope -->
+    <script type="text/javascript">
+        function myController($scope,$rootScope){
+            $scope.name="saidou";
+            $scope.age=26;
+            $rootScope.force="KBZ";
+        }
+        // avec angular on peut créer autant de controller c'est pas comme les autres framework mvc
+        function mySecondController($scope){
+            $scope.nom="saisi";
+        }
+    </script>
+</body>
+</html>

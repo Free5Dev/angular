@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../2-baseAngularJs/angular.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app>
+    <!-- iaison du controller  -->
+    <div ng-controller="myController">
+        <!-- les repeat -->
+        <p ng-repeat="item in items">
+            <!-- les filter avec uppercase -->
+            {{item.nom | uppercase}} est age {{item.age}} et de type {{item.sexe| uppercase}}
+        </p>
+    </div>
+    <!-- les controller en angular -->
+    <script type="text/javascript">
+        // les controller se sont des functions qui prennent des scope ou des rootScoop et il peuvent y avoir autant de controller en angular
+        function myController($scope){
+            $scope.items=[
+                {"nom":"said","age":1,"sexe":"M"},
+                {"nom":"M","age":0,"sexe":"F"}
+            ];
+        }
+    </script>
+</body>
+</html>
