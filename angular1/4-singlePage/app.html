@@ -9,21 +9,32 @@
     <script src="app.js"></script>
     <script src="routing.js"></script>
     <!-- controller -->
-    <script src ="src/controllers/categorieController.js"></script>
-    <script src ="src/controllers/itemController.js"></script>
+    <script src="src/controllers/categoriesController.js"></script>
+    <script src="src/controllers/itemController.js"></script>
     <!-- les directives -->
-    <script src="src/directives/itemDecorativeDirective.js"></script>
+    <script src="src/directives/itemDecoratorDirectives.js"></script>
+    <script src="src/directives/categorieDecoratorDirective.js"></script>
     <!-- les services -->
     <script src="src/services/itemProvider.js"></script>
-    <!-- les routes -->
-    <script src=""></script>
+    <script src="src/services/categorieProvider.js"></script>
     <title>Document</title>
 </head>
 <body ng-app="collectify">
-    <div ng-controller="categorieCreate">
-        {{name}}
+    <!-- pour les contollers -->
+    <div ng-controller="categorieCreate">  
+        {{test}}
     </div>
-    <div ng-view></div>
-
+    <!-- les models de donnees pour les categories -->
+    <div ng-controller="categorieList">
+        <div ng-repeat="categorie in categories">
+            <p categorie-decorator></p>
+        </div>
+    </div>
+    <!-- pour les  controllers -->
+    <div ng-controller="itemCreate">
+        {{test}}
+    </div>
+    <!-- les modeles de donnees pour les items -->
+    <div ng-views></div>
 </body>
 </html>
