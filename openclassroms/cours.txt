@@ -1,0 +1,19 @@
+-------------------------------------INSTALLATION ET CREATION DE PROJECT ANGULAR-------------------------
+CLI===>commande line interface.
+1-)installation de node js sur le site officiel
+2-)Installation de npm==>npm install -g npm@latest <--
+3-)Installation de la CLI d'angular==>npm install -g @angular/CLI <---
+4-)Creation de project sur angular ==>ng new nom-de-projet <--
+5-) Demarage du server ==>ng serve (--open facultatif) <---
+-------------------------------------STRUCTURES AVEC LES COMPONENTS-------------------------
+1-)nouveau project ==>ng new mon-projet-angular --style=scss --skip-tests=true <--
+2-)installation de bootstrap==>npm install bootstrap@3.3.7 --save <--
+3-)dans le fichier angular.json on ajoute la ligne suivante==>
+	"styles": [
+   		 "../node_modules/bootstrap/dist/css/bootstrap.css",
+    		"styles.scss"
+	]
+4-)Creation d'un nouveau component===>ng generate component mon-component <--
+5-)Dans app.component.html on ajout==><app-mon-premier></app-mon-premier> <--
+-------------------------------------GERER DES DONNEES DYNAMIQUES-------------------------
+Databiding liaison de données du dom cad communication entre typescript et html.
